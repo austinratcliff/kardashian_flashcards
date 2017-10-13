@@ -3,7 +3,7 @@ class CreateGuesses < ActiveRecord::Migration
     create_table :guesses do |t|
       t.integer :round_id
       t.integer :flashcard_id
-      t.boolean :correct?
+      t.boolean :status
       t.timestamps
     end
   end

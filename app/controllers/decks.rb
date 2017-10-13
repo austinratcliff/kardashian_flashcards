@@ -1,13 +1,14 @@
 get '/decks' do
   @deck = Deck.first
-  params[:id] = rand(1..@deck.flashcards.count)
-  @flashcard = @deck.flashcards.find(params[:id])
+  random_flashcard = incorrectly_answered_flashcards.sample
+  @flashcard = @deck.flashcards.find(random_flashcard)
   erb :"decks/show"
 end
 
 get '/decks/:deck_id/flashcards/:id' do
+  Round.create ???
   @deck = Deck.first
-  params[:id] = rand(1..@deck.flashcards.count)
-  @flashcard = @deck.flashcards.find(params[:id])
+  random_flashcard = incorrectly_answered_flashcards.sample
+  @flashcard = @deck.flashcards.find(random_flashcard)
   erb :"flashcards/show"
 end
