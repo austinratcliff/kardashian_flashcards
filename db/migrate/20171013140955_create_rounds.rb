@@ -3,6 +3,7 @@ class CreateRounds < ActiveRecord::Migration
     create_table :rounds do |t|
       t.integer :user_id
       t.integer :deck_id
+      t.integer :correct_count
       t.timestamps
     end
   end
