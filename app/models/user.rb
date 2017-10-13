@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   include BCrypt
 
+  has_many :rounds
+
+  validates :username, :email, :password, presence: true
+
   validate :validate_password
 
   def password
