@@ -1,9 +1,6 @@
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :games
-
-  validates :username, :name, presence: true
   validate :validate_password
 
   def password
