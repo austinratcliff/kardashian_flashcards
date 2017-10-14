@@ -1,6 +1,7 @@
 
-  <form method="POST" action="/rounds">
-      <input type="hidden" name="_method"/>
-      <input type="submit" class="button" value="<%= @deck.name %>" />
-  </form>
-
+    <h3>Play A Round</h3>
+    <ul>
+      <% @decks.each do |deck| %>
+        <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+      <% end %>
+    </ul>

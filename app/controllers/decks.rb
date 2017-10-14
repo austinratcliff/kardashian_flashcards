@@ -3,10 +3,8 @@ get '/sessions_viewer' do
 end
 
 get '/decks' do
-  @deck = Deck.first
-
-  session[:correct_card_ids] = [] unless session[:correct_card_ids]
-
+  # @deck = Deck.first
+  @decks = Deck.all
   erb :"decks/show"
 end
 

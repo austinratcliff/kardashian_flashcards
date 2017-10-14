@@ -11,3 +11,30 @@
 <% else %>
   <p>This user hasn't played any rounds.</p>
 <% end %>
+
+
+
+    <% if @current_user.rounds.count > 0 %>
+      <table border="0">
+        <tr>
+          <td>Last Round Correct Guesses:</td>
+          <td class="stat"><%= @correct_guesses_last_round %></td>
+        </tr>
+        <tr>
+          <td>Last Round Incorrect Guesses: </td>
+          <td class="stat"><%= @incorrect_guesses_last_round %></td>
+        </tr>
+        <tr>
+          <td>Total Correct Guesses: </td>
+          <td class="stat"><%= @correct %></td>
+        </tr>
+        <tr>
+          <td>Total Incorrect Guesses:</td>
+          <td class="stat"><%= @incorrect %></td>
+        </tr>
+        <tr>
+          <td>Total Percentage Correct:</td>
+          <td class="stat"><%= @percentage %>%</td>
+        </tr>
+      </table>
+    <% end %>
