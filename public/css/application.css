@@ -1,4 +1,8 @@
 /* BODY */
+* {
+  font-family: "YEEZY TSTAR";
+  src: url(yeezy_tstar-heavy-webfont.ttf) format("truetype");
+}
 
 body {
   background-color: #DBC9BF;
@@ -36,7 +40,7 @@ nav a {
 .main {
   background-color: #C29987;
   margin: 100px auto 100px auto;
-  padding: 200px 100px 200px 100px;
+  padding: 300px;
   border: 50px solid #D3BDAF;
   text-align: center;
   width: 25%;
@@ -44,7 +48,7 @@ nav a {
 
 .main li a {
   color: #D3BDAF;
-  font-size: 50px;
+  font-size: 100px;
   text-decoration: none;
 }
 
