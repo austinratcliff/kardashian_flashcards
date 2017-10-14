@@ -1,3 +1,0 @@
-get '/feedback' do
-
-end
