@@ -5,7 +5,7 @@
 <% if @user.rounds.any? %>
 <ol>
   <% @user.rounds.each do |round|%>
-  <li> <%= @user.username.capitalize %> answered <%= round.correct_count %> questions correctly from the <%= @round.deck.name %>.</li>
+  <li> <%= @user.username.capitalize %> answered <%= round.correct_count %> questions correctly from the <%= round.deck.name %>.</li>
   <% end %>
 </ol>
 <% else %>

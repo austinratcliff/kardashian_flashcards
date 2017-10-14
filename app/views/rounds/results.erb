@@ -1,20 +1,17 @@
-<h3>Results:</h3>
 <% if logged_in? %>
+  <h3>Results:</h3>
   <p>Great job, <%= current_user.username %>! You answered <%= @first_round_right %> out of <%= session[:total_cards] %> correctly on your first round!</p>
 
 <% else %>
   <p> Not a user? Register below, to view statistics! </p><br>
-    <li><a href="/users/new">Sign Up</a></li>
+    <p><a href="/users/new">Sign Up</a></p>
   <p> Already registered? Sign in! </p>
-    <li><a href="/sessions/new">Login</a></li>
+    <p><a href="/sessions/new">Login</a></p>
 <% end %>
 
-<h3>Play Another Round</h3>
-<ul>
-  <% @decks.each do |deck| %>
-    <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
-  <% end %>
-</ul>
+<h3><a href="/decks">Play Another Round</a></h3>
+
+
 
 
 
