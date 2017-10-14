@@ -20,18 +20,18 @@
 <body>
   <div class="container">
     <nav>
-      <h1><a href="/">Game Manager Site</a></h1>
+      <h1><a href="/">FLASHKARDS</a></h1>
       <ul>
         <% if logged_in? %>
         <li><a href="/users/<%= current_user.id %>">Hello, <%= current_user.name %></a></li>
         <li><form method="POST" action="/sessions">
               <input type="hidden" name="_method" value="DELETE" />
-              <input type="submit" class="button" value="Logout" />
+              <input type="submit" class="button" value="LOGOUT" />
             </form>
         </li>
         <% else %>
-        <li><a href="/sessions/new">Login</a></li>
-        <li><a href="/users/new">Sign Up</a></li>
+        <li><h1><a href="/sessions/new">LOGIN</a></h1></li>
+        <li><h1><a href="/users/new">SIGNUP</a></h1></li>
         <% end %>
       </ul>
     </nav>

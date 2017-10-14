@@ -1,0 +1,6 @@
+<p><%= @flashcard.question %></p>
+
+<form method='post' action='/flashcards/<%= @flashcard.id %>/guesses'>
+  <input type='text' name='answer' placeholder='Answer'>
+  <input type='submit' value='Submit'>
+</form>
