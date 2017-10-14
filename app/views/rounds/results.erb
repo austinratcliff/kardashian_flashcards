@@ -1,24 +1,20 @@
-<% @all_guesses.each do |guess|  %>
-  <p>Question: <%= guess.flashcard.question %></p>
-  <p>Correct Answer: <%= guess.flashcard.answer %></p>
+<h3>Results:</h3>
+<% if logged_in? %>
+  <p>Great job, <%= current_user.username %>! You answered <%= @first_round_right %> out of <%= session[:total_cards] %> correctly on your first round!</p>
 
-  <% if guess.status == true %>
-  <p> You answered correctly! Bible, you're the smartest ever! </p>
-  <% elsif guess.status == false %>
-  <p> You answered incrorrectly, but we know you'll get it, next time! </p>
-  <% end%>
-
+<% else %>
+  <p> Not a user? Register below, to view statistics! </p><br>
+    <li><a href="/users/new">Sign Up</a></li>
+  <p> Already registered? Sign in! </p>
+    <li><a href="/sessions/new">Login</a></li>
 <% end %>
 
+<h3>Play Another Round</h3>
+<ul>
+  <% @decks.each do |deck| %>
+    <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+  <% end %>
+</ul>
 
-      <% if logged_in? %>
-        <li><a href="/users/<%= current_user.id %>"><button>Great job, <%= current_user.username %>! You can visit your profile here!</button></a>
-        </li>
-      <% else %>
-      <p> Not a user? Register below, to see view statistics! </p><br>
-        <li><a href="/users/new">Sign Up</a></li>
-        <p> Already registered? Sign in! </p>
-        <li><a href="/sessions/new">Login</a></li>
-      <% end %>
 
 

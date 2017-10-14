@@ -1,13 +1,13 @@
 <h3><%= @user.username.capitalize %>'s Profile Page</h3>
 
-<h4>Statistics:</h4>
+<h4>Round Statistics:</h4>
 
 <% if @user.rounds.any? %>
-<ul>
+<ol>
   <% @user.rounds.each do |round|%>
-  <p>During round <%= round.id %> <%= @user.username.capitalize %> answered <%= round.correct_count %> questions correctly from the Kardashian FlashKards deck.</p>
+  <li> <%= @user.username.capitalize %> answered <%= round.correct_count %> questions correctly from the <%= @round.deck.name %>.</li>
   <% end %>
-</ul>
+</ol>
 <% else %>
   <p>This user hasn't played any rounds.</p>
 <% end %>
