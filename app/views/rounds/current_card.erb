@@ -1,9 +1,9 @@
-<h1><%= @current_card.deck.name %></h1>
-
-  <p>Question:</p>
-  <p><%= @current_card.question %></p>
-
-  <form action="/rounds/<%= round_id %>/flashcard/guess" method="POST">
-    <input type="text" placeholder="Answer" name="answer" required>
-    <button type="submit">Submit</button>
-  </form>
+<div class="current-card">
+  <h1 id="current-card-name"><%= @current_card.deck.name %></h1>
+    <p>Question:</p>
+    <p id="current_card-question"><%= @current_card.question %></p>
+    <form action="/rounds/<%= round_id %>/flashcard/guess" method="POST">
+      <input type="text" placeholder="Answer" name="answer" required>
+      <button type="submit">Submit</button>
+    </form>
+</div>
