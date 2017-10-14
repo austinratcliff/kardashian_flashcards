@@ -3,7 +3,7 @@ get '/deck/:id' do
   current_deck = Deck.find(params[:id])
   count = current_deck.flashcards.all.count
   #Set session variables
-  session[:remaining_cards] = Array (1..count)
+  session[:remaining_cards] = Array(1..count)
   session[:correct_cards] = 0 unless session[:correct_cards]
   session[:total_cards] = Flashcard.all.count
   session[:correct_card_ids] = [] unless session[:correct_card_ids]
