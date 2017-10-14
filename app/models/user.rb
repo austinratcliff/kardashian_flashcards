@@ -8,13 +8,13 @@ class User < ActiveRecord::Base
   validate :validate_password
 
   def password
-    @password ||= Password.new(password_type_thing)
+    @password ||= Password.new(password_hash)
   end
 
   def password=(plain_text_password)
     @raw_password = plain_text_password
     @password = Password.create(plain_text_password)
-    self.password_type_thing = @password
+    self.password_hash = @password
   end
 
   def authenticate(plain_text_password)

@@ -1,6 +1,6 @@
-def incorrectly_answered_flashcards
-  deck = Deck.first
-  flashcards = deck.flashcards
+# def incorrectly_answered_flashcards
+#   deck = Deck.first
+#   flashcards = deck.flashcards
 
-  flashcards.select { |flashcard| flashcard.guesses.first.status == false }
-end
+#   flashcards.select { |flashcard| flashcard.guesses.first.status }
+# end
