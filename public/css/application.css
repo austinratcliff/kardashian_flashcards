@@ -1,21 +1,25 @@
-/* BODY */
+/* COLORS
+light: #DBC9BF (body background)
+medium: #D3BDAF (nav text)
+dark: #C39887 (nav & body text)
+deep dark: #BC8A79 (a:hover) */
 
-* {
-  font-family: "YEEZY TSTAR";
-  src: url(yeezy_tstar-heavy-webfont.ttf) format("truetype");
-}
-
-body {
-  background-color: #DBC9BF;
-  display: flex;
-  justify-content: center;
-}
 
 /* NAVIGATION */
 
 nav {
-  background-color: #C29987;
-  padding: 50px 25px 50px 25px;
+  background-color: #C39887;
+  padding: 25px;
+}
+
+nav a {
+  color: #D3BDAF;
+  font-size: 100px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #BC8A79;
 }
 
 nav ul {
@@ -30,10 +34,17 @@ nav li {
   padding-left: 50px;
 }
 
-nav a {
-  color: #D3BDAF;
-  font-size: 100px;
-  text-decoration: none;
+/* BODY */
+
+* {
+  font-family: "YEEZY TSTAR";
+  src: url(yeezy_tstar-heavy-webfont.ttf) format("truetype");
+}
+
+body {
+  background-color: #DBC9BF;
+  display: flex;
+  justify-content: center;
 }
 
 /* DECKS */
