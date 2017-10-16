@@ -1,4 +1,4 @@
-<h3><%= @user.username.capitalize %>'s History</h3>
+<h3><%= @user.username.capitalize %>'s Statistics</h3>
 
 <ol>
   <% if @user.rounds.any? %>
@@ -6,7 +6,6 @@
       <li><%= round.deck.name %> — <%= round.correct_count %> questions answered correctly</li>
     <% end %>
   <% else %>
-    <p>No history</p>
+    <p>No statistics</p>
   <% end %>
 </ol>
-

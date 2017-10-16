@@ -1,19 +1,16 @@
 
 <div class="results-page">
   <% if logged_in? %>
-    <h3>Results:</h3>
+    <h3>Results</h3>
     <p id="results-page-result">You answered <%= @first_round_right %> out of <%= session[:total_cards] %> correctly during your first round</p>
 
   <% else %>
-    <p>Not a user? Register below, to view your statistics:</p><br>
-      <p><a href="/users/new">Sign-up</a></p>
+    <p>Not a user? Register below, to view your statistics:</p>
+    <p><a href="/users/new">Sign-up</a></p><br>
+
     <p> Already registered? Sign in: </p>
-      <p><a href="/sessions/new">Login</a></p>
+    <p><a href="/sessions/new">Login</a></p><br>
   <% end %>
 
   <h3><a href="/decks">Play Another Round</a></h3>
 </div>
-
-
-
-

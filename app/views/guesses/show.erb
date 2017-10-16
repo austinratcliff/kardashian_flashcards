@@ -1,7 +1,7 @@
 
 <div class="answer-page">
   <p> Sorry, the answer is:</p>
-    <%= @flashcard.answer %>
-  <p> Literally, I kan't believe you didn't know that! </p>
+  <p><%= @flashcard.answer %></p>
+  <p> OMG I literally kan't believe you didn't know that! </p>
   <a href="/rounds/<%= @guess.round_id %>/flashcard/show">Next Question</a>
 </div>
