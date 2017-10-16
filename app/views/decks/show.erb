@@ -1,8 +1,5 @@
-<div class="play-a-round">
-  <h3>Play A Round</h3>
-  <ul id="deck-name">
-    <% @decks.each do |deck| %>
-      <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
-    <% end %>
-  </ul>
-</div>
+<ul>
+  <% @decks.each do |deck| %>
+    <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+  <% end %>
+</ul>

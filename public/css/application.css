@@ -1,25 +1,29 @@
 /* COLORS
-light: #DBC9BF (body background)
-medium: #D3BDAF (nav text)
-dark: #C39887 (nav & body text)
-deep dark: #BC8A79 (a:hover) */
+light: DECABE (background)
+medium: D5BCAD (nav text, body text, & deck border)
+dark: C39885 (nav & deck)
+deep-dark: BB8A74 (hover) */
+
 
 
 /* NAVIGATION */
 
 nav {
-  background-color: #C39887;
+  align-items: center;
+  background-color: #C39885;
+  display: flex;
+  justify-content: space-between;
   padding: 25px;
 }
 
 nav a {
-  color: #D3BDAF;
-  font-size: 100px;
+  color: #D5BCAD;
+  font-size: 150px;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #BC8A79;
+  color: #BB8A74;
 }
 
 nav ul {
@@ -34,6 +38,37 @@ nav li {
   padding-left: 50px;
 }
 
+
+
+/* FORMS */
+
+h3 {
+  color: #D5BCAD;
+  font-size: 100px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  background-color: #D5BCAD;
+  border: none;
+  box-sizing: border-box;
+  color: #BB8A74;
+  font-size: 75px;
+  margin: 25px;
+  padding: 25px;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: #D5BCAD;
+  border: none;
+  color: #BB8A74;
+  font-size: 75px;
+  margin: 25px;
+  padding: 25px;
+}
+
+
+
 /* BODY */
 
 * {
@@ -42,52 +77,42 @@ nav li {
 }
 
 body {
-  background-color: #DBC9BF;
+  background-color: #DECABE;
   display: flex;
   justify-content: center;
 }
 
+
+
 /* DECKS */
 
 .main {
-  background-color: #C29987;
-  margin: 100px auto 100px auto;
+  background-color: #C39885;
+  border: 50px solid #D5BCAD;
+  margin: 100px auto;
   padding: 300px;
-  border: 50px solid #D3BDAF;
   text-align: center;
   width: 25%;
 }
 
-.main li a {
-  color: #D3BDAF;
+.main a {
+  color: #D5BCAD;
   font-size: 100px;
   text-decoration: none;
 }
 
+.main a:hover {
+  color: #BB8A74;
+}
 
+
+
+/* MISC */
 
 .container {
   width: 100%;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 ul {
   list-style-type: none;
-}
-
-.button {
-  background:none!important;
-  border:none;
-  padding:0!important;
-
-  /*optional*/
-  font-family:arial,sans-serif; /*input has OS specific font-family*/
-  color:#069;
-  text-decoration:underline;
-  cursor:pointer;
 }
