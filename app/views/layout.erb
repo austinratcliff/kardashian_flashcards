@@ -18,11 +18,12 @@
       <ul>
         <% if logged_in? %>
         <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-        <li><form method="POST" action="/sessions">
+        <li><a href="/logout">Logout</a></li>
+        <!-- <li><form method="POST" action="/sessions">
               <input type="hidden" name="_method" value="DELETE" />
               <input type="submit" value="Logout" />
             </form>
-        </li>
+        </li> -->
         <% else %>
         <li><a href="/sessions/new">Login</a></li>
         <li><a href="/users/new">Sign Up</a></li>

@@ -15,10 +15,15 @@ post '/sessions' do
 
 end
 
-delete '/sessions' do
-  session.delete(:user_id)
+get '/logout' do
+  session.clear
   redirect '/'
 end
+
+# delete '/sessions' do
+#   session.delete(:user_id)
+#   redirect '/'
+# end
 
 get '/not_authorized' do
   erb :not_authorized
